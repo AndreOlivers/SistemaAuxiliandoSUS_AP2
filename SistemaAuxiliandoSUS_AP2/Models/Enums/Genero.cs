@@ -10,7 +10,7 @@ namespace SistemaAuxiliandoSUS_AP2.Models.Enums
     {
         [Description("Masculino")]
         Masculino,
-        [Description("Faminino")]
+        [Description("Feminino")]
         Faminino,
         [Description("Outros")]
         Outros

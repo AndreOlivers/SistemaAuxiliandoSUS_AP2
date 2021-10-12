@@ -31,7 +31,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
             catch
             {
                 //RETURN BADREQUEST("REQUEST INVÁLIDO")
-                return StatusCode(StatusCodes.Status500InternalServerError, "Erro ao obter aluno");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Erro ao obter Usuario");
             }
 
         }
@@ -49,7 +49,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
             catch
             {
 
-                return BadRequest("Request Inválido");
+                return BadRequest("Usuario não encontrado");
             }
         }
         [HttpGet("{id:int}", Name = "GetUsuario")]
@@ -66,7 +66,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
             catch
             {
 
-                return BadRequest("Request Inválido");
+                return BadRequest("Usuario não encontrado");
             }
 
         }
@@ -81,7 +81,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
 
             catch
             {
-                return BadRequest("Request Inválido");
+                return BadRequest("Erro ao Cadastrar um usuário");
             }
         }
         [HttpPut("{id:int}")]
@@ -92,7 +92,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
                 if(usuario.Id == id)
                 {
                     await _usuarioService.UpdateUsuario(usuario);
-                    return Ok ($"Aluno com id={id} fo atualizado com sucesso");
+                    return Ok ($"Aluno com id={id} foi atualizado com sucesso");
                 }
                 else
                 {
@@ -102,7 +102,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
 
             catch
             {
-                return BadRequest("Request Inválido");
+                return BadRequest("Usuario não encontrado");
             }
         }
         [HttpDelete("{id:int}")]
@@ -124,7 +124,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
 
             catch
             {
-                return BadRequest("Request Inválido");
+                return BadRequest("Usuario não encontrado");
             }
         }
     }

@@ -22,7 +22,7 @@ namespace SistemaAuxiliandoSUS_AP2.Models
         public string Sobrenome { get; set; }
         [Required]
         public int Idade { get; set; }
-        [Required]
+        [Required(ErrorMessage = "E-mail Obrigatório")]
         [EmailAddress]
         [StringLength(100)]
         public string Email { get; set; }
@@ -36,7 +36,7 @@ namespace SistemaAuxiliandoSUS_AP2.Models
         [DisplayName("Confirmar a Senha")]
         [Compare("Senha")]
         [DataType(DataType.Password)]
-        [StringLength(10, MinimumLength = 4, ErrorMessage = "As senha deve ser iguail ao campo senha")]
+        [StringLength(10, MinimumLength = 4, ErrorMessage = "As senhas devem ser iguais ")]
         public string ConfimarSenha { get; set; }
         [Required]
         public string Cidade { get; set; }
@@ -44,7 +44,7 @@ namespace SistemaAuxiliandoSUS_AP2.Models
         [DisplayName("Estado")]
         public Estados Estado { get; set; }
         [Required]
-        [DisplayName("Estado")]
+        [DisplayName("Gênero")]
         public Genero Generos { get; set; }
 
     }
