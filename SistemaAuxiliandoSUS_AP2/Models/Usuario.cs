@@ -34,8 +34,9 @@ namespace SistemaAuxiliandoSUS_AP2.Models
         public string Senha { get; set; }
         [Required]
         [DisplayName("Confirmar a Senha")]
+        [Compare("Senha")]
         [DataType(DataType.Password)]
-        [StringLength(10, MinimumLength = 4, ErrorMessage = "A senha deve ter entre 4 e 10 caracteres")]
+        [StringLength(10, MinimumLength = 4, ErrorMessage = "As senha deve ser iguail ao campo senha")]
         public string ConfimarSenha { get; set; }
         [Required]
         public string Cidade { get; set; }
