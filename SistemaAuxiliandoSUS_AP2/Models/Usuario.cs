@@ -40,12 +40,6 @@ namespace SistemaAuxiliandoSUS_AP2.Models
         public string ConfimarSenha { get; set; }
         [Required]
         public string Cidade { get; set; }
-        [Required]
-        [DisplayName("Estado")]
-        public Estados Estado { get; set; }
-        [Required]
-        [DisplayName("Gênero")]
-        public Genero Generos { get; set; }
-
+    
     }
 }

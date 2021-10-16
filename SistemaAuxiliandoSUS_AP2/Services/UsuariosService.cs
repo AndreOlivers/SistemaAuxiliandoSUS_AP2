@@ -27,7 +27,7 @@ namespace SistemaAuxiliandoSUS_AP2.Services
             }
            
         }
-        public async Task<Usuario> GetUsuario(int id)
+        public async Task<Usuario> GetUsuario(long id)
         {
             var usuario = await _context.Usuarios.FindAsync(id);
             return usuario;

@@ -106,7 +106,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
             }
         }
         [HttpDelete("{id:int}")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult> Delete(long id)
         {
             try
             {
@@ -122,7 +122,7 @@ namespace SistemaAuxiliandoSUS_AP2.Controllers
                 }
             }
 
-            catch
+            catch(Exception e)
             {
                 return BadRequest("Usuario não encontrado");
             }

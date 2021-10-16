@@ -9,7 +9,7 @@ namespace SistemaAuxiliandoSUS_AP2.Services
     public interface IUsuarioService
     {
         Task<IEnumerable<Usuario>> GetUsuarios();
-        Task<Usuario> GetUsuario(int id);
+        Task<Usuario> GetUsuario(long id);
 
         Task<IEnumerable<Usuario>> GetUsuarioByName(string nome);
 
