@@ -37,7 +37,7 @@ namespace SistemaAuxiliandoSUS_AP2
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
-            services.AddScoped<IUsuarioService, UsuariosService>();
+            services.AddScoped<IUsuarioService, UsuariosService>();    
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SistemaAuxiliandoSUS_AP2", Version = "v1" });
